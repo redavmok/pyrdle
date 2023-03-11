@@ -1,5 +1,5 @@
 import random 
-
+#lol
 # this records all guessed words
 almanac = list()
 
