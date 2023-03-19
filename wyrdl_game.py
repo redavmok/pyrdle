@@ -10,7 +10,7 @@ yep_list = list()
 # this sets the starting score
 score = 100
 
-# WORD LIST GENERATOR
+# word list generator
 file_name = input('Enter name of file: ')
 if len(file_name) < 1:
     print("No input, program stopped.")
@@ -29,7 +29,7 @@ else:
 # this chooses the word to be guessed
 WORD = random.choice(word_list)
 
-# DEV TOOL TO SEE WORD
+# dev tool to see the word
 print(WORD)
 
 
@@ -53,7 +53,7 @@ for guess_num in range(1, 7):
         print("Error! Not 5 letters long!")
         continue
     else:
-        #TODOthis block looks for whether the guess is correct, or whether it needs to be analysed
+        # this block looks for whether the guess is correct, or whether it needs to be analysed
         almanac.append(guess)
         if guess == WORD:
             print("Correct!!")
