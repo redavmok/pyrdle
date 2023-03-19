@@ -46,7 +46,7 @@ for guess_num in range(1,7):
         print("Error! Not 5 letters long!")
         continue
     else:
-        # this block looks for whether the guess is correct, or whether it needs to be analysed
+        #TODOthis block looks for whether the guess is correct, or whether it needs to be analysed
         almanac.append(guess)
         if guess == WORD:
             print("Correct!!")

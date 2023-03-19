@@ -23,7 +23,7 @@ Pyrdle is open source to ensure complete security and transparancy of under the 
 
 ### Executing program
 
-* Run the below code in the below terminal to intiiate the game
+* Run the below code in the below terminal to initiate the game
 ```
 python3 pyrdle.py
 ```
@@ -42,6 +42,10 @@ I probably don't know the answer to the question yet!
     * Removed need for pathlib dependency.
     * Implemented the ability for any file to be used as the word list (program will still only use 5-letter words however).
     * Added a visual representation of each guess & wrong/misplaced/correct letters
+
+* Version 3
+    * 
+
 
 ## License
 
