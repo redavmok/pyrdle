@@ -80,4 +80,4 @@ for guess_num in range(1, 7):
             score -= score_guess()
 
 print(f"The word was {WORD}, you guessed {almanac}!")
-print(f"Total score for this game was {score}/100.")
+print(f"Total score for this game was {score}/100!")
