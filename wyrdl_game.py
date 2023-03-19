@@ -3,6 +3,10 @@ import random
 # this records all guessed words
 almanac = list()
 
+# these track which letters are guessed, and whether in -guess- or not
+nope_list = list()
+yep_list = list()
+
 # this sets the starting score
 score = 100
 
@@ -29,11 +33,10 @@ WORD = random.choice(word_list)
 print(WORD)
 
 
-def score_guess(guess_letters, word):
+def score_guess():
     """ score_guess counts each letter, and records whether they are a valid part of the word,
      then returns a score of the guess """
 
-    count_total = 0
     count_misplaced_letters = len(missing_let)
     count_wrong_letters = len(wrong_let) * 2
     count_total = (count_misplaced_letters + count_wrong_letters)
@@ -54,7 +57,7 @@ for guess_num in range(1, 7):
         almanac.append(guess)
         if guess == WORD:
             print("Correct!!")
-            score -= score_guess(guess, WORD)
+            score -= score_guess()
             break
         else:
             # this block creates a graphical representation of each guess
@@ -65,9 +68,16 @@ for guess_num in range(1, 7):
 
                 elif letter in WORD:
                     print(letter + " + ")
+                    if letter not in yep_list:
+                        yep_list.append(letter)
                 else:
                     print(" X ")
-            score -= score_guess(guess, WORD)
+                    if letter not in nope_list:
+                        nope_list.append(letter)
+            print(f"Letters not in word: {nope_list}.")
+            print(f"Letters that are in word: {yep_list}")
+
+            score -= score_guess()
 
 print(f"The word was {WORD}, you guessed {almanac}!")
 print(f"Total score for this game was {score}/100.")
