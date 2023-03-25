@@ -43,7 +43,7 @@ I probably don't know the answer to the question yet!
     * Implemented the ability for any file to be used as the word list (program will still only use 5-letter words however).
     * Added a visual representation of each guess & wrong/misplaced/correct letters
 * Version 3
-    * [insert changes here]
+    * Added spiel to clarify each symbol used.
 
 ## License
 
