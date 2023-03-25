@@ -29,8 +29,16 @@ else:
 # this chooses the word to be guessed
 WORD = random.choice(word_list)
 
-# dev tool to see the word
-print(WORD)
+print(
+'''
+---
+Welcome to Wyrdl! This game will give you six chances to guess a 5-letter word that is randomnly chosen.
+Correct letters are marked by a ✔.
+Misplaced letters are marked by a +. 
+Wrong letters are marked by an X.
+---
+'''
+)
 
 
 def score_guess():
